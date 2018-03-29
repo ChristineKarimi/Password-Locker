@@ -40,3 +40,9 @@ class User:
       if user.user_name == user_name and user.password == password:
         return True
       return False
+
+      def save_account(self):
+    """
+    save_account saves credential object into credential object.
+    """
+    Credentials.credential_list.append(self)
