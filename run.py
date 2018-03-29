@@ -17,3 +17,9 @@ def create_user(user_name, password, email):
 def display_users():
    return User.display_users()
   
+  def login_user(user_name,password):
+  """
+  function that checks whether a user exist and then login the user in.
+  """
+  check_user_exist = Credentials.check_user_exist(user_name,password)
+  return check_user_exist
