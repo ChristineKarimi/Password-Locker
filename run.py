@@ -68,3 +68,17 @@ def display_users():
     if short_code == "ex":
         print("See yah again.......Goodbye!!")
         break 
+
+        elif short_code == "cu":
+        print("Sign Up")
+        print('-' * 30)
+        user_name = input("User_name: ")
+        password = input("Password: ")
+        email = input("Email: ")
+        
+        save_user(create_user(user_name,password,email))
+        print('\n')
+        
+        print(f"Hello,{user_name} your account has been created")
+        print('\n')
+        print('-' * 30)
