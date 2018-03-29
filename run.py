@@ -3,62 +3,63 @@
 from password_locker import User, Credentials
 
 def create_user(user_name, password, email):
-  """
-  Function to create a new user.
-  """
+  
+  #Function to create a new user.
+  
   new_user = User(user_name,password, email)
   return new_user
 
-  def save_user(user):
-  """
-  Function to save user.
-  """
+def save_user(user):
+  
+  #Function to save user.
+  
   user.user_save()
 def display_users():
    return User.display_users()
   
-  def login_user(user_name,password):
-  """
-  function that checks whether a user exist and then login the user in.
-  """
+
+def login_user(user_name,password):
+  
+  #function that checks whether a user exist and then login the user in.
+  
   check_user_exist = Credentials.check_user_exist(user_name,password)
   return check_user_exist
 
-  def create_credential(account_name,account_username, account_password):
-  """
-  Function to create a new credential.
-  """
+def create_credential(account_name,account_username, account_password):
+  
+  #Function to create a new credential.
+  
   new_credential = Credentials(account_name,account_username,account_password)
   return new_credential
 
-  def save_credential(credential):
-  """
-  Function to save new  credential.
-  """
+def save_credential(credential):
+  
+  #Function to save new  credential.
+  
   credential.save_account()
 
-  def delete_account(credential):
-  """
-  Function to delete a credential.
-  """
+def delete_account(credential):
+  
+  #Function to delete a credential.
+  
   credential.delete_account()
 
-  def display_accounts():
-  """
-  Function that returns all the saved credential.
-  """
+def display_accounts():
+  
+  #Function that returns all the saved credential.
+  
   return Credentials.display_accounts()
-
- def generate_password():
-  """
-  Function that generates random password.
-  """
+  
+def generate_password():
+  
+  #Function that generates random password.
+  
   password_gen = Credentials.generate_password()
 
-  return password_gen 
+  return password_gen
 
- def main():
-  print("This is Password Locker")
+def main():
+  print("This is password locker...Welcome!")
   print('\n')
   while True:
     print('.'* 60)  
@@ -66,10 +67,10 @@ def display_users():
     print('.'* 60)
     
     if short_code == "ex":
-        print("See yah again.......Goodbye!!")
-        break 
-
-        elif short_code == "cu":
+        print("It was nice having you. Come back again.......Goodbye!")
+        break
+    
+    elif short_code == "cu":
         print("Sign Up")
         print('-' * 30)
         user_name = input("User_name: ")
@@ -79,29 +80,29 @@ def display_users():
         save_user(create_user(user_name,password,email))
         print('\n')
         
-        print(f"Hello,{user_name} your account has been created")
+        print(f"Hello,{user_name} Your account has been created succesfully!")
         print('\n')
         print('-' * 30)
-
-        elif short_code == "d":
+        
+    elif short_code == "d":
         if display_users():
-            print("Here's a list of the users:")
+            print("Below is the list of users:")
             print('\n')
             for user in display_users():
                 print(f"{user.user_name}")
                 print('\n')
         else:
-            print("There are no users saved yet")
-
-
+            print("Sorry, we don't have any users saved yet")
+                
+        
     elif short_code == "ln":
-        print("Please Enter your Username and your Password to log in")
+        print("Enter your User name and your Password to log in:")
         print('-' * 30)
-        user_name = input("Username: ")
+        user_name = input("User name: ")
         password = input("password: ")
         sign_in = login_user(user_name,password)
         if sign_in == True:
-            print(f"Hi,{user_name},What would you like to do?")
+            print(f"Hello,{user_name} Go ahead....Select what you would like to do.")
             while True:
                 print('.'* 60)
                 short_code = input("Codes: CA - create an account or name of the site your want, DA- display the list of your accounts or sites, EX- exit the site \n").lower().strip()
@@ -116,13 +117,13 @@ def display_users():
                     print('.'* 60)
                     while True:
                         if password_option == "ep":
-                            account_password = input("Enter your password (minimum 8 characters): ")
+                            account_password = input("Enter your password: (minimum 8 characters): ")
                             break
                         elif password_option == "gp":
                             account_password = generate_password()
                             break
                         else:
-                            print("Invalid option")
+                            print("Invalid!")
                             break
                     save_credential(create_credential(account_name,account_username,account_password))
                     print('*' * 30)
@@ -139,20 +140,20 @@ def display_users():
                             print('_'* 30)
                         print('#' * 30)
                     else:
-                        print("No accounts yet")
+                        print("Sorry,......you dont have any accounts yet")
                         
                 elif short_code == "ex":
-                    print("See you again!!!!")
+                    print("It was nice having you.......You're welcome to come again!!!!")
                     break
                 else:
-                    print("Invalid Choice")
+                    print("Invalid!!")
                     
                          
                     
 #                break
                 
         else:
-            print("Ooops!You dnt have an account. To proceed please create an account.")
+            print("You dnt have an account with us.Please create an account inorder to proceed:")
             
 #    break
     
