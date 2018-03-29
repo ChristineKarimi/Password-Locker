@@ -53,14 +53,14 @@ class TestCredentials(unittest.TestCase):
         """ 
         set up method to run before each test cases
         """
-        self.new_credential = Credentials("facebook","jonny govish", "jon88")
+        self.new_credential = Credentials("instagram","karimi_kim", "kim")
 
     def test_init(self):
         """
         Test case to test if the object is initialized properly.
         """
 
-        self.assertEqual(self.new_credential.account_name,"facebook")
-        self.assertEqual(self.new_credential.account_username,"jonny govish")
-        self.assertEqual(self.new_credential.account_password,"jon88")
+        self.assertEqual(self.new_credential.account_name,"instagram")
+        self.assertEqual(self.new_credential.account_username,"karimi_kim")
+        self.assertEqual(self.new_credential.account_password,"kim")
     
