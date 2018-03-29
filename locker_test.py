@@ -1,5 +1,5 @@
 import unittest
-from password-locker import User
+from password_locker import User
 
 class TestUser(unittest.TestCase):
 
@@ -17,3 +17,10 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_user.user_name,"kim")
         self.assertEqual(self.new_user.password, "5991")
         self.assertEqual(self.new_user.email, "karimikim3@gmail.com")
+
+
+    def tearDown(self):
+        """
+        Method that cleans up after each case has run.
+        """
+        User.user_list = []
