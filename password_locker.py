@@ -1,7 +1,6 @@
 import random
 import string
 
-
 class User:
   """
   Class that generates new instances of user
@@ -21,3 +20,14 @@ class User:
   @classmethod
   def display_users(cls):
     return cls.user_list
+
+   class Credentials:
+  """
+  Class that generates new instances of credential object.
+  """
+  global user_list
+  credential_list =[]
+  def __init__(self, account_name, account_username, account_password):
+    self. account_name = account_name
+    self.account_username = account_username
+    self.account_password = account_password 
