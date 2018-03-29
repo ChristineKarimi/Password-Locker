@@ -102,13 +102,13 @@ def main():
         password = input("password: ")
         sign_in = login_user(user_name,password)
         if sign_in == True:
-            print(f"Hello,{user_name} Go ahead....Select what you would like to do.")
+            print(f"Hi,{user_name} Go ahead....Select what you would like to do.")
             while True:
                 print('.'* 60)
                 short_code = input("Codes: CA - create an account or name of the site your want, DA- display the list of your accounts or sites, EX- exit the site \n").lower().strip()
                 print('.'* 60)
                 if short_code == "ca":
-                    print("Create new credentials")
+                    print("Create new account")
                     print('*' * 30)
                     account_name = input("Account name/ Site name: ")
                     account_username = input("Site User Name: ")
