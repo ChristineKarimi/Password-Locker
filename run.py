@@ -1,6 +1,25 @@
 #!/usr/bin/env python3.6
-
 from password_locker import User, Credentials
+
+
+
+def function():
+	print(" __      __   ___  ")
+	print("|  |    |  | |   | ")
+	print("|  |    |  | |   | ")
+	print("|  |    |  | |   | ")
+	print("|  |    |  | |   | ")
+	print("|   ----   | |   | ")
+	print("|          | |   | ") 
+	print("|   ____   | |   | ")
+	print("|  |    |  | |   | ")
+	print("|  |    |  | |   | ")
+	print("|  |    |  | |   | ")
+	print("|__|    |__| |__ | ")
+	print("            ")
+	
+function()
+
 
 def create_user(user_name, password, email):
   

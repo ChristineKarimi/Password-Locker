@@ -28,7 +28,7 @@ Password Locker stores a user's password for their various accounts. It also all
 
 ## Installation
 
-Clone this repo to using the command below:
+Clone this using the command below:
 
 git clone  https://github.com/christinekarimi/password-locker.git
 
