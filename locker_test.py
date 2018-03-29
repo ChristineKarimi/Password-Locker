@@ -32,3 +32,5 @@ class TestUser(unittest.TestCase):
         self.new_user.user_save()
     
         self.assertEqual(len(User.user_list),1)
+
+        
