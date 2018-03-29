@@ -1,7 +1,7 @@
 #!/usr/bin/env python3.6
 from password_locker import User, Credentials
 
-
+#Style
 
 def function():
 	print(" __      __   ___  ")
@@ -9,13 +9,13 @@ def function():
 	print("|  |    |  | |   | ")
 	print("|  |    |  | |   | ")
 	print("|  |    |  | |   | ")
-	print("|   ----   | |   | ")
+	print("|  |____|  | |   | ")
 	print("|          | |   | ") 
 	print("|   ____   | |   | ")
 	print("|  |    |  | |   | ")
 	print("|  |    |  | |   | ")
 	print("|  |    |  | |   | ")
-	print("|__|    |__| |__ | ")
+	print("|__|    |__| |___| ")
 	print("            ")
 	
 function()
