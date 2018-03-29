@@ -36,3 +36,9 @@ def display_users():
   Function to save new  credential.
   """
   credential.save_account()
+
+  def delete_account(credential):
+  """
+  Function to delete a credential.
+  """
+  credential.delete_account()
