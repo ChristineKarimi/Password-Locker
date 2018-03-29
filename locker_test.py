@@ -94,3 +94,10 @@ def test_delete_account(self):
         self.new_credential.delete_account()
 
         self.assertEqual(len(Credentials.credential_list),1)
+
+          def test_display_accounts(self):
+        """
+        Test case to test if lists of accounts are displayed.
+        """
+        self.assertEqual(Credentials.display_accounts(),Credentials.credential_list)
+    
