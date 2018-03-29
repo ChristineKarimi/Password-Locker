@@ -42,3 +42,9 @@ def display_users():
   Function to delete a credential.
   """
   credential.delete_account()
+
+  def display_accounts():
+  """
+  Function that returns all the saved credential.
+  """
+  return Credentials.display_accounts()
