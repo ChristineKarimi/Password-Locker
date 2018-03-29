@@ -56,3 +56,15 @@ def display_users():
   password_gen = Credentials.generate_password()
 
   return password_gen 
+
+ def main():
+  print("This is Password Locker")
+  print('\n')
+  while True:
+    print('.'* 60)  
+    short_code = input("Use this short codes: CU- create a new user account, LN - login into your account (if you already have a password locker account), EX - exit from password locker \n").lower().strip()
+    print('.'* 60)
+    
+    if short_code == "ex":
+        print("See yah again.......Goodbye!!")
+        break 
