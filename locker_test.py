@@ -79,6 +79,6 @@ class TestCredentials(unittest.TestCase):
         Test case to test if we can save multiple credential objects.
         """
         self.new_credential.save_account()
-        test_account = Credentials("Twitter","jgovish","tw89")
+        test_account = Credentials("Facebook","karimikim","ckk")
         test_account.save_account()
         self.assertEqual(len(Credentials.credential_list),2)
