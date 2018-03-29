@@ -30,3 +30,9 @@ def display_users():
   """
   new_credential = Credentials(account_name,account_username,account_password)
   return new_credential
+
+  def save_credential(credential):
+  """
+  Function to save new  credential.
+  """
+  credential.save_account()
