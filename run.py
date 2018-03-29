@@ -82,3 +82,13 @@ def display_users():
         print(f"Hello,{user_name} your account has been created")
         print('\n')
         print('-' * 30)
+
+        elif short_code == "d":
+        if display_users():
+            print("Here's a list of the users:")
+            print('\n')
+            for user in display_users():
+                print(f"{user.user_name}")
+                print('\n')
+        else:
+            print("There are no users saved yet")
