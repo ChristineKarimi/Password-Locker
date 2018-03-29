@@ -1,9 +1,7 @@
 import random
 import string
 
-# user_name =""
-# user_password =""
-global user_list
+
 class User:
   """
   Class that generates new instances of user

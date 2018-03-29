@@ -24,3 +24,11 @@ class TestUser(unittest.TestCase):
         Method that cleans up after each case has run.
         """
         User.user_list = []
+
+    def test_user_save(self):
+        """
+        Test case to test if the user object is saved into the user_list.
+        """
+        self.new_user.user_save()
+    
+        self.assertEqual(len(User.user_list),1)
